@@ -1,3 +1,7 @@
-echo enter the file name you want to add 
-read $1
-git add "$1"
+echo enter the file name
+read afile
+
+if [ -f "$afile" ]
+then echo $afile,exists
+else echo $afile, does not exists
+fi
